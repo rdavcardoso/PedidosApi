@@ -93,7 +93,7 @@ A interface estará disponível em:
 
 ## 📷 Screenshots
 
-> (Adicione capturas de tela do Scalar, Vue e exemplos de payloads aqui)
+> Espaço para screenshots do scalar e do frontend implementado.
 
 ---
 
