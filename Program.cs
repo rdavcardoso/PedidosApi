@@ -15,7 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
-
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -25,7 +26,7 @@ app.MapPedidoEndpoints();
 
 //Home
 app.MapGet("/", () => "Minimal API CRUD criada por Rogério Cardoso da Vitória" +
-                      "/nFeita para aprendizado de EF Core!");
-
+                      "\nFeita para aprendizado de EF Core!");
+app.UseSwagger();
 
 app.Run();
