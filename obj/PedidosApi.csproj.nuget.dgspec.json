@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi\\PedidosApi.csproj": {}
+    "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi\\PedidosApi.csproj": {
+    "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi\\PedidosApi.csproj",
+        "projectUniqueName": "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi.csproj",
         "projectName": "PedidosApi",
-        "projectPath": "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi\\PedidosApi.csproj",
+        "projectPath": "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\RiderProjects\\PedidosApi\\PedidosApi\\obj\\",
+        "outputPath": "C:\\Users\\User\\RiderProjects\\PedidosApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
