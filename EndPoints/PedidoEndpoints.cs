@@ -22,7 +22,9 @@ public static class PedidoEndpoints
                 .ToListAsync();
                 
             return Results.Ok(pedidos);
-        });
+        })
+        .WithTags("Pedidos")
+        .WithName("ListarPedidos");
         
         app.MapGet("/pedidos/{id}", async (int id, AppDbContext db) =>
         {
@@ -33,7 +35,9 @@ public static class PedidoEndpoints
                 .FirstOrDefaultAsync(p => p.Id == id);
             
             return pedido != null ? Results.Ok(pedido) : Results.NotFound();
-        });
+        })
+        .WithTags("Pedidos")
+        .WithName("ObterPedido");
         
         app.MapPost("/pedidos", async (PedidoCreateDto dto, AppDbContext db) =>
         {
@@ -55,7 +59,9 @@ public static class PedidoEndpoints
             await db.SaveChangesAsync();
 
             return Results.Created($"/pedidos/{pedido.Id}", pedido);
-        });
+        })
+        .WithTags("Pedidos")
+        .WithName("CriarPedido");
         
         app.MapPut("/pedidos/{id}", async (int id, PedidoUpdateDto dto, AppDbContext db) =>
         {
@@ -76,7 +82,9 @@ public static class PedidoEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .WithTags("Pedidos")
+        .WithName("AtualizarPedido");
         
         app.MapDelete("/pedidos/{id}", async (int id, AppDbContext db) =>
         {
@@ -89,7 +97,9 @@ public static class PedidoEndpoints
 
             return Results.NoContent();
 
-        });
+        })
+        .WithTags("Pedidos")
+        .WithName("RemoverPedido");
         
     }
     

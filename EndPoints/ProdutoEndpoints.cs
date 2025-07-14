@@ -19,14 +19,18 @@ public static class ProdutoEndpoints
             var produtos = await db.Produtos.ToListAsync();
             
             return Results.Ok(produtos);
-        } );
+        })
+        .WithTags("Produtos")
+        .WithName("ListarProdutos");;
         
         app.MapGet("/produtos/{id}", async (int id, AppDbContext db) =>
         {
             var produto = await db.Produtos.FindAsync(id);
 
             return produto != null ? Results.Ok(produto) : Results.NotFound();
-        });
+        })
+        .WithTags("Produtos")
+        .WithName("ObterProduto");;
         
         app.MapPost("/produtos", async (ProdutoCreateDto dto, AppDbContext db) =>
         {
@@ -41,7 +45,9 @@ public static class ProdutoEndpoints
             await db.SaveChangesAsync();
 
             return Results.Created($"/produtos/{produto.Id}", produto);
-        });
+        })
+        .WithTags("Produtos")
+        .WithName("CriarProduto");
         
         app.MapPut("/produtos/{id}", async (int id, ProdutoCreateDto dto, AppDbContext db) =>
         {
@@ -56,7 +62,9 @@ public static class ProdutoEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .WithTags("Produtos")
+        .WithName("AtualizarProduto");
         
         app.MapDelete("/produtos/{id}", async (int id, AppDbContext db) =>
         {
@@ -68,7 +76,9 @@ public static class ProdutoEndpoints
             db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .WithTags("Produtos")
+        .WithName("RemoverProduto");
     }
     
 }
