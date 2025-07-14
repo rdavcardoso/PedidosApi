@@ -72,9 +72,9 @@ dotnet run
 ```
 
 A API será executada em:  
-`https://localhost:5001`
+`http://localhost:5122/`
 
-> A documentação estará disponível no Scalar: `http://localhost:5001/docs`
+> A documentação estará disponível no Scalar: `http://localhost:5122/scalar/`
 
 ---
 
