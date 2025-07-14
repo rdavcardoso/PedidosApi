@@ -133,3 +133,4 @@ C:\Users\User\RiderProjects\PedidosApi\PedidosApi\obj\Debug\net9.0\PedidosApi.pd
 C:\Users\User\RiderProjects\PedidosApi\PedidosApi\obj\Debug\net9.0\PedidosApi.genruntimeconfig.cache
 C:\Users\User\RiderProjects\PedidosApi\PedidosApi\obj\Debug\net9.0\ref\PedidosApi.dll
 C:\Users\User\RiderProjects\PedidosApi\PedidosApi\bin\Debug\net9.0\Docs\openapi.json
+C:\Users\User\RiderProjects\PedidosApi\PedidosApi\bin\Debug\net9.0\Scalar.AspNetCore.dll

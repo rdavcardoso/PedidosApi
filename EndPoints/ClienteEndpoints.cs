@@ -17,13 +17,17 @@ public static class ClienteEndpoints
         {
             var clientes = await db.Clientes.ToListAsync();
             return Results.Ok(clientes);
-        });
+        })
+        .WithTags("Clientes")
+        .WithName("ListarClientes");
         
         app.MapGet("/clientes/{id}", async (int id, AppDbContext db) =>
         {
             var cliente = await db.Clientes.FindAsync(id);
             return cliente != null ? Results.Ok(cliente) : Results.NotFound();
-        });
+        })
+        .WithTags("Clientes")
+        .WithName("ObterClientes");
         
         app.MapPost("/clientes", async (ClienteCreateDto dto, AppDbContext db) =>
         {
@@ -37,7 +41,9 @@ public static class ClienteEndpoints
             await db.SaveChangesAsync();
 
             return Results.Created($"/clientes/{cliente.Id}", cliente);
-        });
+        })
+        .WithTags("Clientes")
+        .WithName("CriarCliente");
         
         app.MapPut("/clientes/{id}", async (int id, ClienteCreateDto dto, AppDbContext db) =>
         {
@@ -51,7 +57,9 @@ public static class ClienteEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .WithTags("Clientes")
+        .WithName("AtualizarCliente");
         
         app.MapDelete("/clientes/{id}", async (int id, AppDbContext db) =>
         {
@@ -63,7 +71,9 @@ public static class ClienteEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .WithTags("Clientes")
+        .WithName("RemoverCliente");
         
     }
     
